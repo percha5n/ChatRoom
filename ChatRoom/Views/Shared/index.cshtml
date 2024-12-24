@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-8,offset-2">
+        <h2>Chat Room</h2>
+            @* 
+                Este elemento de lista desordenada (ul) está estilizado con la clase "list-group", 
+                que se utiliza en Bootstrap para crear un componente de grupo de listas. 
+                Los grupos de listas son componentes flexibles y potentes para mostrar una serie 
+                de contenidos. Cada elemento en el grupo de listas sera un elemento de lista (li) 
+                estilizado con las clases apropiadas para coincidir con el estilo del grupo de listas.
+            *@
+            <ul class="list-group">
+                @foreach(var e in ChatRoom.Controllers.ChatController.Rooms){
+                    <li class="list-group-item">
+                        <a href="~/Chat/Room?room/@e.Key">@e.Value</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
