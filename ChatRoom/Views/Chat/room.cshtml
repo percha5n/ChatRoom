@@ -1,0 +1,44 @@
+<div class="col-6">
+    <div id="messages"></div>
+</div>
+<div class="col-6">
+    <div id="Notificacion"></div>
+</div>
+<div class="col-12">
+    <input type="text" id="user" placeholder="Enter your name" />
+    <input type="text" id="message" placeholder="Enter your message" />
+    <button id="btnSend">Send</button>
+</div>
+
+<!-- Incluye la biblioteca JavaScript de SignalR -->
+<script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>
+
+<script>
+    var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
+
+    connection.start().then(function() {
+        console.log("connected");
+    }).catch(function (err) {
+        return console.error(err.toString());
+    });
+
+    document.getElementById("btnSend").addEventListener("click", function (event) {
+        let user = document.getElementById("user").value;
+        let message = document.getElementById("message").value;
+
+        connection.invoke("SendMessage", user, message).catch(function (err) {
+            return console.error(err.toString());
+        });
+
+        document.getElementById("message").value = "";
+        document.getElementById("message").focus();
+
+        event.preventDefault();
+    });
+
+    connection.on("ReceiveMessage", function (user, message) {
+        var msg = document.createElement("div");
+        msg.innerHTML = "<b>" + user + " dijo:</b> " + message;
+        document.getElementById("messages").appendChild(msg);
+    });
+</script>

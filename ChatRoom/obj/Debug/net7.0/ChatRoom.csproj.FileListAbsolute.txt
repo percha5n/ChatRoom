@@ -32,3 +32,5 @@
 /home/ezzz3/ChatRoom/ChatRoom/obj/Debug/net7.0/ChatRoom.pdb
 /home/ezzz3/ChatRoom/ChatRoom/obj/Debug/net7.0/ChatRoom.genruntimeconfig.cache
 /home/ezzz3/ChatRoom/ChatRoom/obj/Debug/net7.0/ref/ChatRoom.dll
+/home/ezzz3/ChatRoom/ChatRoom/bin/Debug/net7.0/package-lock.json
+/home/ezzz3/ChatRoom/ChatRoom/bin/Debug/net7.0/package.json

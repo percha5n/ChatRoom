@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /home/ezzz3/ChatRoom/ChatRoom
 build_property._RazorSourceGeneratorDebug = 
 
+[/home/ezzz3/ChatRoom/ChatRoom/Views/Chat/room.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2hhdC9yb29tLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/ezzz3/ChatRoom/ChatRoom/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

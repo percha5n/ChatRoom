@@ -43,9 +43,8 @@
     });
 
     connection.on("ReceiveMessage", (user, message) => {
-        var messages = "<div><b>" + user + "dijo:</b>: " + message + "</div>";
-        document.getElementById("messages").innerHTML = messages +
-        document.getElementById("messages").innerHTML;
+        let msg = document.createElement("div");
+        msg.textContent = `${user}: ${message}`;
+        document.getElementById("messages").appendChild(msg);
     });
-    
 </script>
